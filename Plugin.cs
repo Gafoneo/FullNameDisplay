@@ -82,7 +82,7 @@ internal static class NameSanitizePatch
 
     [HarmonyPrefix]
     [HarmonyPatch(typeof(GameNetworkManager), "SteamMatchmaking_OnLobbyMemberJoined")]
-    public static bool Prefix5(Lobby _, Friend friend, GameNetworkManager __instance)
+    public static bool Prefix5(Lobby lobby, Friend friend, GameNetworkManager __instance)
     {
         var Instance = GameNetworkManager.Instance;
 
